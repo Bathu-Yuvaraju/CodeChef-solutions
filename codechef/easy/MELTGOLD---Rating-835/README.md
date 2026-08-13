@@ -68,7 +68,7 @@ Thus, after $3$ minutes the temperature of kiln becomes $11$, which is greater t
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-13T10:13:11.660Z  
+**Submitted:** 2026-08-13T10:13:21.209Z  
 
 ```java
 
