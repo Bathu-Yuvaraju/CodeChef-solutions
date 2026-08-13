@@ -58,7 +58,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-13T10:14:25.349Z  
+**Submitted:** 2026-08-13T10:14:42.241Z  
 
 ```java
 
