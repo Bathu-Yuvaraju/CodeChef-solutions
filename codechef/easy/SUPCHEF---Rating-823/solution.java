@@ -7,20 +7,17 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		int t;
-	  Scanner sc =new Scanner(System.in);
-	  t=sc.nextInt();
-	  while(t-->0){
-	   int m=sc.nextInt();
-	   int n=sc.nextInt();
-	   int k=sc.nextInt();
-	    if((n*k)<m){
-	       System.out.println("Yes");
-	    }
-	    else{
-	        
-	      System.out.println("No");  
-	    }
-	  }
+		Scanner read = new Scanner(System.in);
+		int t = read.nextInt();
+		for(int i=0; i<t; i++){
+		    int a = read.nextInt();
+		    int b = read.nextInt();
+		    if((Math.abs(a-b))%2==0){
+		        System.out.println("YES");
+		    }
+		    else{
+		        System.out.println("NO");
+		    }
+		}
 	}
 }
