@@ -1,0 +1,86 @@
+# EQLZING - Rating 823
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+### Equalizing Numbers
+
+Chef has two integers $A$ and $B$. In one operation he can choose any integer $d,$ and make one of the following two moves :
+
+- Add $d$ to $A$ and subtract $d$ from $B$.
+- Add $d$ to $B$ and subtract $d$ from $A$.
+
+Chef is allowed to make as many operations as he wants. Can he make $A$ and $B$  **equal** ?
+
+### Input Format
+- First line will contain $T$, number of test cases. Then the test cases follow.
+- Each test case contains of a single line of input, two integers $A, B$.
+### Output Format
+
+For each test case, if Chef can make the two numbers equal print `YES` else print `NO`.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings `yEs`, `Yes`, `YeS`, and `YES` will all be treated as identical).
+
+### Constraints
+- $1 \leq T \leq 1000$
+- $1 \leq A,B \leq 1000$
+### Sample 1:
+Input
+Output
+
+```
+2
+3 3
+1 2
+
+```
+
+```
+Yes
+No
+
+```
+
+### Explanation:
+
+ **Test case $1$:**  Since $A$ and $B$ are already equal, Chef does not need any operations.
+
+ **Test case $2$:**  It can be shown that $A$ and $B$ can never be made equal using any number of given operations.
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-08-13T09:41:53.305Z  
+
+```java
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner read = new Scanner(System.in);
+		int t = read.nextInt();
+		for(int i=0; i<t; i++){
+		    int a = read.nextInt();
+		    int b = read.nextInt();
+		    if((Math.abs(a-b))%2==0){
+		        System.out.println("YES");
+		    }
+		    else{
+		        System.out.println("NO");
+		    }
+		}
+	}
+}
+```
+
+---
+
+[View on CodeChef](https://www.codechef.com/problems/EQLZING)
