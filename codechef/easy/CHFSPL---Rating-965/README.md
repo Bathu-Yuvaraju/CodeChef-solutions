@@ -56,7 +56,7 @@ Chef should choose the third option and use the spells with power $4$ and $8$ to
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T05:56:07.082Z  
+**Submitted:** 2026-08-14T05:57:27.702Z  
 
 ```java
 import java.util.*;
@@ -67,24 +67,15 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
 		while(t-->0){
-		    int a = sc.nextInt();
-		    int b = sc.nextInt();
-		    int a1 = sc.nextInt();
-		    int b1 = sc.nextInt();
-		    int a2 = sc.nextInt();
-		    int b2 = sc.nextInt();
-		    if((a==a1 || a==b1) && (b==a1 || b==b1)){
-		        System.out.println(1);
-		    }
-		    else if((a==a2 || a==b2) && (b==a2 || b==b2)){
-		        System.out.println(2);
-		    }
-		    else{
-		        System.out.println(0);
-		    }
+		    int[] a=new int[3];
+		    a[0]=sc.nextInt();
+		    a[1]=sc.nextInt();
+		    a[2]=sc.nextInt();
+		    Arrays.sort(a);
+		    System.out.println(a[2]+a[1]);
 		}
 	}
 }
