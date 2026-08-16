@@ -13,7 +13,7 @@ Which property should a good hash function have to minimize collisions?
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T15:07:13.920Z  
+**Submitted:** 2026-08-16T15:07:17.878Z  
 
 ```cpp
 import java.util.Scanner;
