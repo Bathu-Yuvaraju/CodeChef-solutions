@@ -1,0 +1,67 @@
+# JXDJHO11
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+## Problem
+
+_Description not available._
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-08-17T17:36:23.285Z  
+
+```java
+class Point {
+    private int x;
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Point)) {
+            return false;
+        }
+        Point other = (Point) obj;
+        return this.x == other.x && this.y == other.y;
+    }
+}
+
+class Codechef {
+    public static void main(String[] args) {
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(1, 2);
+        Point p3 = new Point(3, 4);
+        Point p4 = new Point(1, 3);
+
+        System.out.println("p1 equals p2: " + p1.equals(p2));
+        System.out.println("p1 equals p3: " + p1.equals(p3));
+        System.out.println("p1 equals p4: " + p1.equals(p4));
+        System.out.println("p1 equals null: " + p1.equals(null));
+    }
+}
+```
+
+---
+
+[View on CodeChef](https://www.codechef.com/problems/JXDJHO11)
