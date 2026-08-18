@@ -4,43 +4,50 @@
 
 ## Problem
 
-_Description not available._
+### Display Employee Details
+- Let’s practice how to override the toString() method to produce meaningful and user-friendly output from objects.
+- In this problem, you are given an Employee class that stores details such as the employee’s name, ID, and designation. By default, printing an object would result in unhelpful output like Employee@15db9742.
+
+To make the output informative, your  **task**  is to  **override**  the `toString()` method so that it returns a well-formatted string showing the employee's information.
+
+ **Expected Output:** 
+
+```
+Employee[name=Bob Smith, id=1001, designation=Software Engineer]
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T17:36:47.330Z  
+**Submitted:** 2026-08-17T17:37:01.538Z  
 
 ```java
-class User {
-    // Attributes of the User class
+class Employee {
     String name;
-    String age;
+    int id;
+    String designation;
 
-    // Constructor to initialize User object
-    User(String name, String age) {
+    public Employee(String name, int id, String designation) {
         this.name = name;
-        this.age = age;
+        this.id = id;
+        this.designation = designation;
     }
 
-    // Overriding toString() to provide custom string representation
     @Override
     public String toString() {
-        // Returning a formatted string with user details
-        return "User Details: { " + "Name: '" + name + "', " + "Age: '" + age + "' }";
+        return "Employee[name=" + name + ", id=" + id + ", designation=" + designation + "]";
     }
 }
 
 class Codechef {
     public static void main(String[] args) {
-    
-        User user1 = new User("Alice", "25");
-        
-        // Printing the user1 object, which will invoke the toString() method
-        System.out.println(user1);
 
+        Employee employee1 = new Employee("Bob Smith", 1001, "Software Engineer");
+        
+        System.out.println(employee1);
     }
 }
 ```
