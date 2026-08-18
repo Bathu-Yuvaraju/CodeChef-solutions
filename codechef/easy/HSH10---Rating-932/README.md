@@ -4,48 +4,63 @@
 
 ## Problem
 
-_Description not available._
+### Built-In Hashing Data Structures
+
+Most programming languages offer built-in data structures that implement hashing. For example, C++ has `std::unordered_map`, Java provides `HashSet` and `HashMap`, and Python has dictionaries.
+
+These built-in hash maps also come with mechanisms to handle collisions efficiently.
+
+### Task
+
+Execute the code given in the IDE to explore how these built-in hashing data structures function.
+
+### Sample 1:
+Input
+Output
+
+```
+6
+213512345
+1234123
+1000000000
+987987435
+134604389
+23
+
+```
+
+```
+0 1 2 3 4 5 
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-18T05:36:33.400Z  
+**Submitted:** 2026-08-18T05:36:41.505Z  
 
 ```java
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-    static final int M = 999983;
-    static final int MX = 1000000000;
-
-    static int[] Hash = new int[M];
-
-    // Hash Function
-    static int f(int x) {
-        return x % M;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
-        int[] a = new int[n];
+
+        int[] arr = new int[n];
+        Map<Integer, Integer> mp = new HashMap<>();
+
         for (int i = 0; i < n; i++) {
-            a[i] = scanner.nextInt();
-        }
-        
-        // Write your code here
-         long ans = 0; 
-        for (int i = 0; i < n; i++) {
-            if (a[i] > -31623 && a[i] < 31623) {
-                ans += Hash[f(a[i] * a[i])];
-            }
-            Hash[f(a[i])]++;
+            arr[i] = scanner.nextInt();
+            mp.put(arr[i], i);
         }
 
-        System.out.println(ans);
+        for (int i = 0; i < n; i++) {
+            System.out.print(mp.get(arr[i]) + " ");
+        }
+        System.out.println();
     }
 }
 
