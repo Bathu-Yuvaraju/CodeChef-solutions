@@ -4,31 +4,49 @@
 
 ## Problem
 
-_Description not available._
+### Comparing Point Objects
+- In this practice problem, you will learn how to override the equals() method to compare two objects based on their internal state (in this case, x and y coordinates).
+- You are given two classes: Point: Represents a point in a 2D space with x and y coordinates. Codechef: Contains the main() method to test equality between different Point objects.
+
+ **Task** 
+Complete the missing lines in the code to:
+
+- Correctly implement the equals() method in the Point class to return true when both the x and y values match.
+- Ensure the method handles: Null checks. Object reference checks. Type compatibility. Field comparisons.
+
+ **Expected Output:** 
+
+```
+p1 equals p2: true
+p1 equals p3: false
+p1 equals p4: false
+p1 equals null: false
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T17:34:47.396Z  
+**Submitted:** 2026-08-17T17:36:21.503Z  
 
 ```java
-class Employee {
-    private int employeeId;
-    private String name;
+class Point {
+    private int x;
+    private int y;
 
-    public Employee(int employeeId, String name) {
-        this.employeeId = employeeId;
-        this.name = name;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
+    public int getX() {
+        return x;
     }
 
-    public String getName() {
-        return name;
+    public int getY() {
+        return y;
     }
 
     @Override
@@ -39,27 +57,25 @@ class Employee {
         if (this == obj) {
             return true;
         }
-        if (!(obj instanceof Employee)) {
+        if (!(obj instanceof Point)) {
             return false;
         }
-        Employee other = (Employee) obj;
-        return this.employeeId == other.employeeId && this.name.equals(other.name);
+        Point other = (Point) obj;
+        return this.x == other.x && this.y == other.y;
     }
 }
 
 class Codechef {
     public static void main(String[] args) {
-        Employee emp1 = new Employee(101, "Alice");
-        Employee emp2 = new Employee(101, "Alice");
-        Employee emp3 = new Employee(102, "Bob");
-        Employee emp4 = new Employee(101, "Charlie");
-        Employee emp5 = emp1;
+        Point p1 = new Point(1, 2);
+        Point p2 = new Point(1, 2);
+        Point p3 = new Point(3, 4);
+        Point p4 = new Point(1, 3);
 
-        System.out.println("emp1 equals emp2: " + emp1.equals(emp2));
-        System.out.println("emp1 equals emp3: " + emp1.equals(emp3));
-        System.out.println("emp1 equals emp4: " + emp1.equals(emp4));
-        System.out.println("emp1 equals emp5: " + emp1.equals(emp5));
-        System.out.println("emp1 equals null: " + emp1.equals(null));
+        System.out.println("p1 equals p2: " + p1.equals(p2));
+        System.out.println("p1 equals p3: " + p1.equals(p3));
+        System.out.println("p1 equals p4: " + p1.equals(p4));
+        System.out.println("p1 equals null: " + p1.equals(null));
     }
 }
 ```
