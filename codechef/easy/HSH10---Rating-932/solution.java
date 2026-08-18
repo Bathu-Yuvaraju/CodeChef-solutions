@@ -1,34 +1,21 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-    static final int M = 999983;
-    static final int MX = 1000000000;
-
-    static int[] Hash = new int[M];
-
-    // Hash Function
-    static int f(int x) {
-        return x % M;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
-        int[] a = new int[n];
+
+        int[] arr = new int[n];
+        Map<Integer, Integer> mp = new HashMap<>();
+
         for (int i = 0; i < n; i++) {
-            a[i] = scanner.nextInt();
-        }
-        
-        // Write your code here
-         long ans = 0; 
-        for (int i = 0; i < n; i++) {
-            if (a[i] > -31623 && a[i] < 31623) {
-                ans += Hash[f(a[i] * a[i])];
-            }
-            Hash[f(a[i])]++;
+            arr[i] = scanner.nextInt();
+            mp.put(arr[i], i);
         }
 
-        System.out.println(ans);
+        for (int i = 0; i < n; i++) {
+            System.out.print(mp.get(arr[i]) + " ");
+        }
+        System.out.println();
     }
 }
