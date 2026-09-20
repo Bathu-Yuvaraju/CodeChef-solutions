@@ -82,7 +82,7 @@ Here, `K = 2`, and the first two elements are `0 1`.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-20T17:27:26.755Z  
+**Submitted:** 2026-09-20T17:27:46.482Z  
 
 ```java
     public static int removeDuplicates(int[] nums) {
