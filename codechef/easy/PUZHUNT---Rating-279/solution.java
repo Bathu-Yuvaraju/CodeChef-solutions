@@ -8,11 +8,9 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc=new Scanner(System.in);
-		int t=sc.nextInt();
-		while(t-->0)
-		{
+		
 		    int x=sc.nextInt();
-		    if(x>=30)
+		    if(x>=6&&x<=8)
 		    {
 		        System.out.println("yes");
 		    }
@@ -20,7 +18,6 @@ class Codechef
 		    {
 		        System.out.println("no");
 		    }
-		}
 
 	}
 }
