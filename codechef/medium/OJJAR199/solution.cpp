@@ -1,0 +1,33 @@
+
+                                                              return newBoard;
+                                                              };
+
+                                                              function App() {
+                                                                const [board, setBoard] = useState(() => {
+                                                                    let initialBoard = getEmptyBoard();
+                                                                        initialBoard = addRandomTile(initialBoard);
+                                                                            initialBoard = addRandomTile(initialBoard);
+                                                                                return initialBoard;
+                                                                                  });
+
+                                                                                    return (
+                                                                                        <div className="container">
+                                                                                              <div className="board">
+                                                                                                      {board.map((row, rowIndex) => (
+                                                                                                                <div className="row" key={rowIndex}>
+                                                                                                                            {row.map((cell, cellIndex) => (
+                                                                                                                                          <div 
+                                                                                                                                                          key={cellIndex} 
+                                                                                                                                                                          className={`cell ${cell === 0 ? 'cell-0' : 'cell-1'}`}
+                                                                                                                                                                                        >
+                                                                                                                                                                                                        {cell !== 0 ? cell : ''}
+                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                  ))}
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                    ))}
+                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                );
+                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                export default App;
