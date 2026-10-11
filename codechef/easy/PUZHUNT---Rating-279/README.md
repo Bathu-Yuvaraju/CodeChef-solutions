@@ -82,7 +82,7 @@ So, Chef's team can participate in the event.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:47:57.712Z  
+**Submitted:** 2026-10-11T06:13:15.604Z  
 
 ```java
 import java.util.*;
