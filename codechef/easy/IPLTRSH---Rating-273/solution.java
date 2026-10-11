@@ -13,9 +13,11 @@ class Codechef
 		{
 		    int x=sc.nextInt();
 		    int y=sc.nextInt();
-		    System.out.println(y-x);
+		    if(x>y)
+		        System.out.println(x-y);
+		    else
+		        System.out.println(0);
 		}
-
 
 	}
 }
