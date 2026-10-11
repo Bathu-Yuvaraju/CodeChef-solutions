@@ -74,7 +74,7 @@ Chef was initially paying $10$ rupees. After Chefina moves in, he needs to pay $
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:41:38.408Z  
+**Submitted:** 2026-10-11T06:10:05.189Z  
 
 ```java
 import java.util.*;
