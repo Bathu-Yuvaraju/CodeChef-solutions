@@ -55,7 +55,7 @@ The $7$-th character of $\texttt{"outofsight"}$ is `'i'`, and hence that is Chef
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:40:59.259Z  
+**Submitted:** 2026-10-11T06:09:39.280Z  
 
 ```java
 import java.util.*;
