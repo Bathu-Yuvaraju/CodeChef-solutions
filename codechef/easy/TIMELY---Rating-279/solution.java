@@ -12,7 +12,7 @@ class Codechef
 		while(t-->0)
 		{
 		    int x=sc.nextInt();
-		    if(x>=67&&x<=45000)
+		    if(x>=30)
 		    {
 		        System.out.println("yes");
 		    }
