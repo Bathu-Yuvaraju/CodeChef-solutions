@@ -6,21 +6,20 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
-		Scanner sc=new Scanner(System.in);
-		int t=sc.nextInt();
-		for(int i=0;i<t;i++){
-		    int n=sc.nextInt();
-		    if(n%2==0 || n%7==0){
-		        System.out.println("YES");
-		    }
-		    else if(n%2!=0 && n>7){
-		        System.out.println("YES");
-		    }
-		    else{
-		        System.out.println("NO");
-		    }
-		}
-
+		Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+        while (t-- > 0) {
+            int N = sc.nextInt();
+            if (N >= 7) {
+                System.out.println("YES");
+            } else {
+                if (N % 2 == 0) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+            }
+        }
 	}
 }
